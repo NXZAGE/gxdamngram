@@ -1,0 +1,12 @@
+<template>
+  <div class="home">Страница 1</div>
+</template>
+
+<script>
+export default {
+  name: "HomeView",
+  components: {
+    //
+  },
+};
+</script>
