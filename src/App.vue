@@ -1,36 +1,23 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <v-row align="center" justify="start">
-        <!-- Ссылки для роутера -->
-        <v-col class="col-1">
-          <v-btn depressed to="/"> Home </v-btn>
-        </v-col>
-        <v-col class="col-1">
-          <v-btn depressed to="/about"> About </v-btn>
-        </v-col>
-      </v-row>
-    </v-app-bar>
+    <NavigationBar />
 
-    <v-main>
-      <!-- Сюда подставятся views исходя из роута -->
-      <router-view />
+    <v-main class="px-12 py-3">
+      <v-container fluid>
+        <router-view />
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import NavigationBar from "./components/NavigationBar.vue"
+
 export default {
   name: "App",
+  components: {
+    NavigationBar
+  }
 
-  data: () => ({
-    //
-  }),
-
-  mounted() {
-    this.axios.get("url").then((data) => {
-      console.log(data);
-    });
-  },
 };
 </script>

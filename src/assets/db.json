@@ -1,0 +1,13 @@
+{
+    "users": [
+        {
+            "login": "admin",
+            "password": "admin",
+            "email": "admin@mail.ru",
+            "phone": "8 (800) 555-35-35",
+            "city": "company",
+            "company": "Admin inc.",
+            "photo": "https://avavatar.ru/image/2136"
+        }
+    ]
+}

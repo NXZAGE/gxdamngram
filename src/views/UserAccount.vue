@@ -1,0 +1,81 @@
+<template>
+  <div>
+    <h1>{{ id }}</h1>
+    <v-row class="text-left">
+      <v-col cols="10">
+        <h1 class="green--text text--darken-2">
+          <v-icon large color="green darken-2">mdi-account-outline</v-icon>
+          {{ user.name }}
+        </h1>
+      </v-col>
+    </v-row>
+    <v-row class="text-left">
+      <v-col cols="2">
+        <img src="https://randomuser.me/api/portraits/men/7.jpg" style="max-width: 100%">
+      </v-col>
+      <v-col cols="8" class="text-left">
+        <p>
+          Веб-сайт: <a :href="getWebsiteLink(user.website)" target="_blank">{{ user.website }}</a>
+        </p>
+        <p>
+          E-mail: <a :href="getEmailLink(user.email)">{{ user.email }}</a>
+        </p>
+        <p>
+          Город: {{ user.city }}
+        </p>
+        <p>
+          Место работы: {{  user.workplace }}
+        </p>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="10">
+        <UserPost/>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="10">
+        <UserPost/>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="10">
+        <UserPost/>
+      </v-col>
+    </v-row>
+  </div>
+</template>
+
+<script>
+import UserPost from "../components/UserPost.vue"
+
+  export default {
+    name: "UserAccount",
+    components: {
+      UserPost
+    },
+    data() { 
+      return {
+        user: {
+          name: "Ivan Ivanov",
+          website: "github.com",
+          email: "example@gmail.com",
+          city: "Los Angeles",
+          workplace: "Worm home"
+        },
+        id: this.$route.params.id,
+      }
+    },
+    methods: {
+      getEmailLink(email) {
+        return "https://malta:" + email;
+      },
+      getWebsiteLink(website) {
+        return "https://" + website;
+      }
+    }
+  };
+</script>
