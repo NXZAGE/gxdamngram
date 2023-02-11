@@ -1,13 +1,32 @@
 {
     "users": [
-        {
-            "login": "admin",
-            "password": "admin",
-            "email": "admin@mail.ru",
-            "phone": "8 (800) 555-35-35",
-            "city": "company",
-            "company": "Admin inc.",
-            "photo": "https://avavatar.ru/image/2136"
-        }
+      {
+        "id" : 1,
+        "login": "admin",
+        "password": "admin",
+        "email": "admin@mail.ru",
+        "phone": "8 (800) 555-35-35",
+        "city": "company",
+        "company": "Admin inc.",
+        "photo": "https://avavatar.ru/image/2136"
+      },
+      {
+        "id" : 2,
+        "login": "nxzage",
+        "password": "1234",
+        "email": "nxz@gmail.ru",
+        "phone": "8 (811) 555-35-35",
+        "city": "company",
+        "company": "Admin inc.",
+        "photo": "https://avavatar.ru/image/2136"
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "author_id": 2,
+        "header": "WOW",
+        "description": "It's the first post in this coll social!!! gxdaaaamn"
+      }  
     ]
-}
+  }

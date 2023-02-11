@@ -27,7 +27,18 @@ export default {
   },
   methods: {
     authenticate() {
-      console.log("autentificated")
+      let api = "https://api.npoint.io/949f260cfed82dbe321f"
+      this.axios.get(api).then((response) => {
+        let users = response.data.users;
+        for(let i in users){
+          let user = users[i];
+          if (user.login == this.login && user.password == this.password){
+            console.log("autenticated");
+            return;
+          }
+        }
+        console.log("not founded user");
+      })
       // let json_string;
       // let dbFile = new File([json_string], "/src/assets/db.json");
       // let reader = new FileReader();
