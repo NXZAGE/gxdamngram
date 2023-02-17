@@ -44,7 +44,10 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": "off",
+      "no-unused-expressions": "off"
+    }
   },
   "browserslist": [
     "> 1%",

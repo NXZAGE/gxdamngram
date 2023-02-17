@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <NavigationBar />
+    <NavigationBar :user="accountLink"/>
 
     <v-main class="px-12 py-3">
       <v-container fluid>
@@ -17,7 +17,16 @@ export default {
   name: "App",
   components: {
     NavigationBar
+  },
+  data() {
+    return {
+      userID: 2,
+    }
+  },
+  computed: {
+    accountLink: function(){
+      return "/user/" + this.userID
+    }  
   }
-
 };
 </script>

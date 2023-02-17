@@ -30,7 +30,7 @@
 
         <v-divider class="my-3"></v-divider>
 
-        <v-list-item link :to="pass">
+        <v-list-item link to="/">
           <v-list-item-icon>
             <v-icon>mdi-home-outline</v-icon>
           </v-list-item-icon>
@@ -42,7 +42,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item link :to="pass">
+        <v-list-item link :to="user">
           <v-list-item-icon>
             <v-icon>mdi-account-outline</v-icon>
           </v-list-item-icon>
@@ -72,6 +72,7 @@
 
 <script>
 export default {
-  name: "NavigationBar"
+  name: "NavigationBar",
+  props: ['user'],
 }
 </script>
