@@ -1,16 +1,21 @@
 <template>
   <v-card outlined>
-    <v-card-title>SomeCardTitle</v-card-title>
-    <v-card-text>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi magnam ipsum qui recusandae, commodi
-      quibusdam, sequi cum excepturi pariatur sunt itaque debitis dolores numquam libero fugit distinctio quidem.
-      Reprehenderit, necessitatibus.
+    <v-card-subtitle class="text-overline py-2 text--primary">{{ author }}</v-card-subtitle>
+    <v-card-subtitle class="text-subtitle-1 pt-0 pb-2 text--primary">{{ header }}</v-card-subtitle>
+    <v-card-text class="text--primary">
+      <slot>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Incidunt nesciunt dicta laboriosam totam modi temporibus
+        nemo tenetur expedita debitis voluptas.
+        Eius, amet vero odio illo quo aspernatur adipisci molestias explicabo!
+      </slot>
     </v-card-text>
-  </v-card>
+</v-card>
 </template>
 
 <script>
-export default{
+export default {
   name: "UserPost",
+  props: ["header", "author"]
 }
 </script>
