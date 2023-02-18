@@ -27,17 +27,18 @@ export default {
   },
   methods: {
     authenticate() {
-      let api = "https://api.npoint.io/949f260cfed82dbe321f"
+      let api = "https://api.npoint.io/7b537035221a819d5d7c";
       this.axios.get(api).then((response) => {
         let users = response.data.users;
         for(let i in users){
           let user = users[i];
           if (user.login == this.login && user.password == this.password){
-            console.log("autenticated");
+            console.log("authenticated");
+            this.$emit('authenticated', user.id);
             return;
           }
         }
-        console.log("not founded user");
+        alert("not founded user");
       })
       // let json_string;
       // let dbFile = new File([json_string], "/src/assets/db.json");

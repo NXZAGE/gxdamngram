@@ -3,12 +3,7 @@
     <v-card-subtitle class="text-overline py-2 text--primary">{{ author }}</v-card-subtitle>
     <v-card-subtitle class="text-subtitle-1 pt-0 pb-2 text--primary">{{ header }}</v-card-subtitle>
     <v-card-text class="text--primary">
-      <slot>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Incidunt nesciunt dicta laboriosam totam modi temporibus
-        nemo tenetur expedita debitis voluptas.
-        Eius, amet vero odio illo quo aspernatur adipisci molestias explicabo!
-      </slot>
+      <slot></slot>
     </v-card-text>
 </v-card>
 </template>

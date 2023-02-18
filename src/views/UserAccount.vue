@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     getEmailLink(email) {
-      return "https://malta:" + email;
+      return "https://malta/" + email;
     },
     getAccountData() {
       let api = "https://api.npoint.io/7b537035221a819d5d7c";

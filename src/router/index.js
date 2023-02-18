@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import AboutView from "../views/AboutView.vue";
 import LoginView from "../views/LoginView.vue";
 import UserAccount from "../views/UserAccount.vue"
+import FindFriends from "../views/FindFriends.vue"
 
 Vue.use(VueRouter);
 
@@ -12,11 +12,6 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    component: AboutView,
   },
   {
     path: "/login",
@@ -28,6 +23,11 @@ const routes = [
     name: "user",
     component: UserAccount,
   },
+  {
+    path: "/users",
+    name: "users",
+    component: FindFriends,
+  }
 ];
 
 const router = new VueRouter({

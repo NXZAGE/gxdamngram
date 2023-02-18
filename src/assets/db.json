@@ -30,3 +30,16 @@
       }  
     ]
   }
+
+
+  {
+    "id": ,
+    "login": "",
+    "password": "1234",
+    "name": "",
+    "email": "",
+    "phone": "",
+    "city": "",
+    "company": "",
+    "photo": ""
+  },
